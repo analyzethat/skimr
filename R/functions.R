@@ -87,15 +87,6 @@ posixct_funs<-list(
   n_unique = purrr::compose(length, n_unique)  
 )
 
-sfc_multipolygon_funs<-list(
-  missing = n_missing,
-  complete = n_complete,
-  n = length,
-  n_unique = purrr::compose(length, n_unique),
-  valid = purrr::compose(sum, sf::st_is_valid)
-)
-
-
 .default <- list(
   numeric = numeric_funs,
   integer = integer_funs,
@@ -107,8 +98,7 @@ sfc_multipolygon_funs<-list(
   date = date_funs,
   Date = date_funs,
   ts = ts_funs,
-  POSIXct = posixct_funs,
-  sfc_MULTIPOLYGON= sfc_multipolygon_funs
+  POSIXct = posixct_funs
 )
 
 
