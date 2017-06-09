@@ -3,6 +3,7 @@
 S3method(print,skim_df)
 S3method(skim,data.frame)
 export("%>%")
+export(funny)
 export(inline_hist)
 export(max_char)
 export(min_char)

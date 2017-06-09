@@ -46,7 +46,8 @@ sfc_multipolygon_funs<-list(
   complete = n_complete,
   n = length,
   n_unique = purrr::compose(length, n_unique),
-  valid = purrr::compose(sum, sf::st_is_valid)
+  valid = purrr::compose(sum, sf::st_is_valid),
+  funny = funny
 )
 
 sfc_geometry_funs<-list(
@@ -54,8 +55,7 @@ sfc_geometry_funs<-list(
   complete = n_complete,
   n = length,
   n_unique = purrr::compose(length, n_unique),
-  valid = purrr::compose(sum, sf::st_is_valid),
-  funny = funny
+  valid = purrr::compose(sum, sf::st_is_valid)
 )
 
 

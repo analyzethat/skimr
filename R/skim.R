@@ -31,7 +31,6 @@ skim_tee <- function(.data) {
 
 skim.sf <- function(.data) {
   source("R/functions_sf.R")
-  skim_with(sfc= .sfc, append = FALSE )
      rows <- purrr::map(.data, skim_v)
      combined <- dplyr::bind_rows(rows, .id = "var")
    return(structure(combined, class = c("skim_df", class(combined))))
